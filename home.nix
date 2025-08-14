@@ -37,6 +37,8 @@
     neovim
     playerctl
     bat
+    tmux
+    neofetch
   ];
 
   programs.firefox.enable = true;
@@ -45,7 +47,8 @@
     enable = true;
     shellAliases = {
       btw = "echo i use nixos btw";
-      nrs = "sudo nixos-rebuild switch";      
+      nrs = "sudo nixos-rebuild switch --impure --flake /home/laurel/nixos-flakes";
+      nfu = "nix flake update";
     };
   };
 
